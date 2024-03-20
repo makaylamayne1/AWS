@@ -1,0 +1,72 @@
+AWS CloudFront is a content delivery Network 
+ A CDN is a distributed network of servers that helps to reduce the time it takes for a webpage or content to load by delivering this content from a server that is geographically closer to the user.
+
+Route 53 
+Register domain names
+Add IP addresses to these domains 
+Located alongside edge locations 
+
+Hosted Zone 
+A collection of records for a specified domain 
+Public hosted zone -> for the public traffic 
+Private -> for the traffic in your VPC 
+
+CNAME 
+"To ensure seamless continuity, we set up a CNAME record that maps our old domain to the new one."
+
+You cannot create an alias record for non-subdomains 
+
+CNAME records can be used to redirect traffic from a non-www subdomain to the corresponding www subdomain. This can be useful for SEO purposes, as search engines usually require the use of the www subdomain.
+CNAME records can be used to redirect traffic from one web domain to another web domain. This can be useful for websites that have changed their domain name or have been acquired by another company.
+
+Alias 
+Can only point to Cloudfront, ELB, S3 and static websites 
+his is because aliases are used to map a record to a specific IP address or a specific CloudFront distribution. By using aliases, you can create virtual IPs that can be used to route traffic to different services based on various factors such as region, availability, and traffic volume.
+
+There are different types of routing policies 
+
+
+There are CloudFront Origins
+These are origins that can be all over the world for 
+example North America, Japan and China 
+Cloudfront origins is the origin where the content is coming from 
+
+OAI 
+Special type of user to access S3 buckets or resources only 
+The bucket only allows access from specific cloudfront users 
+Only useful for S3. 
+Deprecated and replaced by OAC 
+OAC requires an S3 bucket policy to allow the principal to access the bucket.
+
+Cloudfront SSL and TLS 
+What is SSL and TLS 
+SSL and TLS ensure that data is not altered in transit. 
+
+In SSL, the encryption process begins when the client and server agree on an encryption key using a method known as the "handshake." Once both sides have agreed on an encryption key, the server sends a digital certificate that identifies the server's public key. The client then uses the server's public key to encrypt the session key, which is then used to encrypt the data being sent between the client and server. On the receiving end, the server decrypts the data using its corresponding private key.
+
+The protocol provides secure channels for data transmission by using encrypted connections between clients and servers. TLS also provides authentication, ensuring that the server and client have established a mutually agreed-upon connection.
+
+CloudFront is an Amazon Web Services (AWS) service that allows developers to securely distribute content to users globally using Amazon's content delivery network. One of the key features of CloudFront is that it supports encryption using SSL/TLS, which helps to protect content during transmission over the internet
+
+In Cloudfront you pay for IP Addresses 
+
+SNI 
+SNI (Server Name Indication) is a feature of the TLS protocol used in CloudFront that allows multiple SSL/TLS certificates to be served by the same IP address, improving the efficiency of content delivery.Without SNI, each site would need to be served from a different IP address, which would require purchasing multiple IP addresses and increasing the complexity of server management. By using SNI, CloudFront can reduce the cost and complexity of server management, and improve the efficiency of content delivery.
+
+Lambda Edge 
+Customize the content that Cloudfront Delivers with Node.js and Python Lambda functions.
+Executes functions closer to the viewer.
+Lambda allows you to RUN FUNCTIONS CLOSER TO YOUR VIEWERS 
+And then just remember the different points at which you can process data using Lambda.
+At the AWS Data Centre: You can run your Lambda function in a data center closest to your audience. This reduces network latency, which can improve performance for applications serving global users.
+At the Edge: AWS Lambda Edge allows you to run your Lambdas even closer to your audience, which can further reduce network latency and improve performance.
+In Your Application: You can also run your Lambda functions within your own application, which can integrate them with your existing infrastructure and code.
+In Your Data Pipeline: If you have a data pipeline, you can use Lambda to process and analyze your data before sending it to your application.
+In Your Data Lake: You can also use Lambda to process and analyze data stored in a data lake or data warehouse.
+
+Global Accelerator
+Allows you to use the global AWS network to send data to your applications without using the public internet. This can reduce the amount of time it takes to get your data to the users. 
+ Global Accelerator is a CloudFront service that uses Route 53 to create DNS alias records that resolve to the Global Accelerator endpoint, which is a set of IP addresses that are geographically distributed across multiple AWS Regions. When a user makes a request to your Global Accelerator endpoint, they are automatically directed to the CloudFront edge location that is closest to them, which reduces latency and improves performance.
+
+ Static Anycast IP address ?
+ A static anycast IP address is a special type of IP address that allows traffic from multiple geographically dispersed points of presence (POPs) to be routed to a single IP address.
