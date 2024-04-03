@@ -63,17 +63,11 @@ function App() {
   return (
     <BrowserRouter>
       <div className={`App ${nightMode ? "night-mode" : "day-mode"}`}>
-        <button className="button" onClick={toggleNightMode}>
-          Toggle Night Mode
-        </button>
-        <h2>Use this timer to manage your time for each section</h2>
+     
+
         <div className={` ${timer ? "youtubeStyle1" : "youtubeStyle2"}`}>
           <YouTube videoId={videoId} opts={opts1} />
-          <button
-            onClick={() => {
-              toggleTimer();
-            }}
-          >{` ${timer ? "Remove" : "Bring Back"}`}</button>
+         
         </div>
 
         <main>

@@ -2,3 +2,50 @@
     background-color: beige;
     font-family: 'Times New Roman', Times, serif;
 }
+.background {
+    background-color: rgba(255, 218, 185, 0.7); /* Light pink */
+    margin-top: 3%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-width: 3px;
+    border-color: #b5651d; /* Brown */
+    border-style: groove;
+    padding: 2%;
+}
+
+
+
+.form-group{ 
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Use a clean and modern font */
+    font-size: 16px; /* Adjust the font size as needed */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+    color: #333; /* Dark grey color for text */
+}
+
+h3{  
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Use a clean and modern font */
+    font-size: 23px; /* Adjust the font size as needed */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+    color: #0e0000; /* Dark grey color for text */
+}
+.save-button{
+    margin-top:12%;
+}
+
+input[type="text"] {
+    background-color: #a67a516e; /* Set background color */
+    padding: 8px; /* Add padding for better appearance */
+    border: 2px solid #3e2b09; /* Add border for clarity */
+    border-radius: 4px; /* Add border radius for rounded corners */
+    color:#502203;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+
+  input[type="text"]:hover {
+    background-color: #f3bc8995; /* Set background color */
+    padding: 8px; /* Add padding for better appearance */
+    border: 2px solid #3e2b09; /* Add border for clarity */
+    border-radius: 4px; /* Add border radius for rounded corners */
+    color:#502203;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
