@@ -63,7 +63,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className={`App ${nightMode ? "night-mode" : "day-mode"}`}>
-     
 
         <div className={` ${timer ? "youtubeStyle1" : "youtubeStyle2"}`}>
           <YouTube videoId={videoId} opts={opts1} />
